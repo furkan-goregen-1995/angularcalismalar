@@ -1,0 +1,349 @@
+<html ng-app = "myapp">
+<head>
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <!--i18n translate-->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/bower-angular-translate/2.0.1/angular-translate.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bower-angular-translate-loader-url/2.0.0/angular-translate-loader-url.js"></script> -->
+    <!--Animation-->
+    <!-- <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-animate.min.js"></script>
+    <script data-require="angular.js@*" data-semver="1.7.9" src="https://code.angularjs.org/1.7.9/angular.min.js"></script>
+    <script data-require="angular-animate@*" data-semver="1.7.9" src="https://code.angularjs.org/1.7.9/angular-animate.min.js"></script>     -->
+    
+    <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="animation.css"/>
+        <body>
+
+            <!--i18n translate-->
+            <!-- <p translate="TEXT"></p> -->
+         
+            <!--Animation-->
+            <!-- <div ng-init="checked=true">
+                <label>Göster</label>
+                <input type="checkbox" ng-model="checked">
+
+                <div class="sample-text" ng-show="checked">
+                    Visible...
+                </div>
+            </div> -->
+        
+            
+            <!--Directive scope-->
+            <!-- <input type="text" ng-model = "isim" placeholder = "AngularJS" ng-init = "isim: 'AngularJS'">
+
+            <my-element my-attribute="isim"></my-element> -->
+         
+            <!--link kullanımı-->
+            <!-- <ng-link-example></ng-link-example> -->
+
+            <!--ng-repeat-->
+            <!-- <ol ng-controller="repeatcontroller">
+                <li ng-repeat="kisi in kisiler | orderBy: 'yas'">
+                    {{kisi.isim}},{{kisi.yas}} yaşında ve {{kisi.sehir}} şehrinde yaşıyor.
+                </li>
+            </ol> -->
+            
+            <!--ng-class-->
+            <!-- <label>Yeşil</label>
+            <input type="checkbox" ng-model="kirmiziMi">
+            <label>Küçük</label>
+            <input type="checkbox" ng-model="kucukMu">
+            <label>İlk Harfi Büyük</label>
+            <input type="checkbox" ng-model="ilkHarfBuyukMu">
+
+            <h1 ng-class="{yesil: kirmiziMi, kucuk: kucukMu, capital: ilkHarfBuyukMu}">ngClass Örnek</h1>
+             -->
+            
+            <!-- ng-if -->
+            <!-- <label for="chk">Tıkla</label>
+            <input id="chk" type="checkbox" ng-model="durum" ng-init="durum=false"><br>
+    
+            <p ng-if="durum">
+                Furkan Göregen 1995 yılında Ankara Altındağ da dünyaya geldi.
+            </p> -->
+            
+            <!--Directive Oluşturma-->
+            <!-- <benim-directiveim>
+
+            </benim-directiveim>
+
+            <div benim-directiveim></div> -->
+            
+            <!--Form-->
+            <!-- <form ng-controller="formcontroller" name="angularForm" novalidate="novalidate">
+
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="user" ng-model="user" required="" />
+                    <span style="color:red" ng-show="angularForm.user.$dirty && angularForm.user.$invalid">
+                        <span ng-show="angularForm.user.$error.required">Name alanı boş geçilemez</span>
+                    </span>
+                </div>
+
+                <div>
+                    <label>Email:</label>
+                    <input type="email" name="email" ng-model="email" required="" />
+                    <span style="color:red" ng-show="angularForm.email.$dirty && angularForm.email.$invalid">
+                        <span ng-show="angularForm.email.$error.required">Email alanı boş geçilemez</span>
+                        <span ng-show="angularForm.email.$error.email">Email adresi uygun değil</span>
+                    </span>
+                </div>
+
+                <div>
+                    <input type="submit" ng-disabled="angularForm.user.$dirty && angularForm.user.$invalid || angularForm.email.$dirty && angularForm.email.$invalid">
+                </div>
+
+            </form> -->
+
+            <!--Customer Filter-->
+            <!-- <input type="text" ng-model = "name = 'angularjs'">
+            <h3>{{name | myFilter}}</h3> -->
+
+            <!--LimitTo Kullanımı-->
+            <!-- <div ng-controller = "limittocontroller">
+
+             <p>Sayı Dizisi: {{sayiDizisi}}</p>       
+             <input type="text" ng-model ="diziLimiti">
+             
+             <p>Formatlanmış Dizi: </p>
+             <p>{{sayiDizisi | limitTo: diziLimiti}}</p>
+             
+             <p>String Değer: {{karakterString}}</p>
+             <input type="text" ng-model = "karakterLimiti">
+             <p>{{karakterString | limitTo: karakterLimiti}}</p>
+             
+             <p>Sayi Değeri: {{sayi}}</p>
+             <input type="text" ng-model = "sayiLimiti">
+             <p>{{sayi | limitTo: sayiLimiti}}</p>   
+
+            </div> -->
+            
+            <!--OrderBy Kullanımı-->
+            <!-- <div ng-controller="orderbycontroller">
+                <table>
+                    <tr>
+                        <td>İsim</td>
+                        <td>Telefon</td>
+                        <td>Yaş</td>
+                    </tr>
+                    <tr ng-repeat="kisi in kisiler | orderBy: 'yas'">
+                        <td>{{kisi.isim}}</td>
+                        <td>{{kisi.telefon}}</td>
+                        <td>{{kisi.yas}}</td>
+                    </tr>
+                </table>
+            </div> -->
+            
+            <!-- Date -->
+            <!-- <P>{{now | date}}</P>
+            <P>{{now | date:'medium'}}</P>
+            <P>{{now | date:'short'}}</P>
+            <P>{{now | date:'fullDate'}}</P>
+            <P>{{now | date:'longDate'}}</P>
+            <P>{{now | date:'mediumDate'}}</P>
+            <P>{{now | date:'mediumTime'}}</P>
+            <P>{{now | date:'shortTime'}}</P>
+            {{2*6}} -->
+            
+            <!-- Filtreleme -->
+            <!-- <input type="text" ng-model="name">
+            <h3>{{name | uppercase}}</h3> -->
+            <!-- <input type="text" ng-model="name">
+            <h3>{{name | uppercase}}</h3> -->
+            <!-- <input type="text" ng-model="name">
+            <h3>{{name | lowercase}}</h3> -->
+
+            <!-- Controller Metod Tanımlama -->
+            <!-- <h3>{{state}}</h3>
+            <button ng-click="clickMe()">Click Me</button> -->
+            
+            <!-- Parent-Child Controller -->
+            <!-- <div ng-controller="parentcontroller">
+                <input type="text" ng-model="childname">
+                <h2>Parent Header: {{childname}}</h2>
+                <div ng-controller="chidrencontroller">
+                    <input type="text" ng-model="childname">
+                    <h3>Child Header: {{childname}}</h3>
+                </div>
+            </div> -->
+            
+            <script>
+
+                var myapp = angular.module("myapp",['pascalprecht.translate']);
+               
+                //i18n translate
+                // myapp.config(function($translateProvider){
+
+                //     $translateProvider.translations('en',{
+                //         TITLE: 'Hello',
+                //         TEXT: 'Hello AngularJS',
+                //         BUTTON_LANG: 'Save',
+                //     });
+                //     $translateProvider.translations('tr',{
+                //         TITLE: 'Merhaba',
+                //         TEXT: 'Merhaba AngularJS',
+                //         BUTTON_LANG: 'Kaydet',
+                //     });
+
+                //     $translateProvider.preferredLanguage('tr');
+                // })
+                
+                //http
+                // myapp.factory("myService",function($http){
+                //     var _kisiGetir = function() {
+                //         return $http.get("/kisi");
+                //     };
+                //     var _kisiKaydet = function(isim){
+                //         return $http.post("/kisi",isim);
+                //     };
+                //     return{
+                //         kisiGetir: _kisiGetir,
+                //         saveUser: _kisiKaydet
+                //     };
+                // });
+                
+                //factory
+                // myapp.factory('helloService',function(){
+                //     return {
+                //         sayHello: function(name){
+                //             console.log('Hello ' + name);
+                //         },
+                //         echo: function(message){
+                //             console.log(message);
+                //         }
+                //     }
+                // });
+                // myapp.controller('factorycontroller',function($scope,helloService){
+                //     helloService.sayHello("Factory");
+                //     helloService.echo("Factory");
+                // })
+
+
+                //Animation
+                // var myapp = angular.module("myapp",['ngAnimate']);
+
+                //Directive Scope
+                // myapp.directive('myElement',function(){
+                //     return{
+                //         restrict: 'EA',
+                //         scope: {
+                //             directiveIsim:'=myAttribute'
+                //         },
+                //         replace: true;
+                //         template: '<p><input type="text" ng-model="directiveIsim"/></p>',
+                //         link: function(scope,elem,attrs){
+
+                //         }
+                //     }
+                // });
+                
+                
+                //link kullanımı
+                // myapp.directive('ngLinkExample',function(){
+                //     return{
+                //         restrict: 'AE',
+                //         template: '<h3>AngularJS</h3>',
+                //         link: function(scope,element,attrs){
+                //             element.bind('click',function(){
+                //                 element.css('color','blue');
+                //             });
+                //         }
+                //     }
+                // });
+
+                //ng-repeat
+                // myapp.controller('repeatcontroller',function($scope){
+
+                //     $scope.kisiler = [{
+
+                //         isim:"Angular",
+                //         sehir: "Ankara",
+                //         yas: "23"
+                //     },{
+                //         isim:"Javascript",
+                //         sehir:"İstanbul",
+                //         yas: "43"
+                //     },{
+                //         isim:"Android",
+                //         sehir:"İzmir",
+                //         yas: "33"
+                //     },{
+                //         isim:"IOS",
+                //         sehir: "Bursa",
+                //         yas: "13"
+                //     }];
+
+                // });
+                
+                //Directive Oluşturma
+                // myapp.directive('benimDirectiveim',function(){
+                //     return {
+                //         restrict: 'AE',
+                //         template: 'Merhaba AngularJS'
+                //     }
+                // });
+
+                //Form
+                // myapp.controller('formcontroller',function($scope){
+
+                // });
+                
+                //Costumer Filter
+                // myapp.filter('myFilter',function(){
+                //     return function(input){
+                //         return input.toUpperCase();
+                //     }
+                // });             
+            
+                //LimitTo Kullanımı
+                // myapp.controller("limittocontroller",['$scope',function($scope){
+                    
+                //     $scope.sayiDizisi = [1,2,3,4,5,6,7,8,9];
+                //     $scope.karakterString = "abcdefgh";
+                //     $scope.sayi = 5646864;
+
+                //     $scope.diziLimiti = 3;
+                //     $scope.karakterLimiti = 3;
+                //     $scope.sayiLimiti = 3
+
+                // }]);
+                
+                //OrderBy Kullanımı
+                // myapp.controller('orderbycontroller',['$scope',function($scope){
+
+                //     $scope.kisiler = [
+                //         {isim: 'Furkan', telefon: '456468', yas:25},
+                //         {isim: 'Feyza', telefon: '6864468', yas:22},
+                //         {isim: 'Büşra', telefon: '4056468', yas:16},
+                //         {isim: 'Nisa', telefon: '453468', yas:13}
+                //     ];
+                // }]);
+                
+                //Date
+                // myapp.controller("TimeController",function($scope,$interval,$timeout){
+                //     $interval(function(){
+                //         var d=new Date();
+                //         $scope.now=d.getTime();
+                //     },1000)
+                // });
+                
+                // Controller Metod Tanımlama
+                // myapp.controller("mycontroller",function($scope){
+                //     $scope.state = "Merhaba Controller";
+                //     $scope.clickMe = function(){
+                //         $scope.state = "Buton Tıklandı!";
+                //     };
+                // });
+
+                //rootScope
+                // .run(function($rootScope){
+                //     $rootScope.childname = "RootScope Degeri";
+                // })
+                // .controller("parentcontroller",function($scope) {})
+                // .controller("chidrencontroller",function($scope) {});
+            
+            </script>
+        </body> 
+    </head>
+</html>

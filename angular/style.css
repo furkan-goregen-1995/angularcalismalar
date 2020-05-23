@@ -1,0 +1,24 @@
+.ustu-cizili {
+    text-decoration: line-through;
+}
+
+
+.mavi {
+    color: blue;
+}
+
+.kirmizi{
+    color: red;
+}
+
+.yesil {
+    color: green;
+}
+
+.kucuk{
+    font-size: 10px;
+}
+
+.capital{
+    text-transform: Capitalize;
+}

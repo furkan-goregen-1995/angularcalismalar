@@ -1,0 +1,14 @@
+.sample-text {
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+}
+
+.sample-text {
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+.sample-text.ng-hide {
+    opacity: 0;
+}
